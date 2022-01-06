@@ -19,7 +19,7 @@ const initialState = {
   nbPages: 0
 }
 
-const AppContext = React.createContext()
+const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -44,6 +44,7 @@ const AppProvider = ({ children }) => {
             {children}
           </AppContext.Provider>
 }
+
 // make sure use
 export const useGlobalContext = () => {
   return useContext(AppContext)
