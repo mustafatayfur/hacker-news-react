@@ -22,7 +22,10 @@ const Stories = () => {
                 </p>
                 <div>
                     <a href={url}
-                     
+                     className='read-link'
+                     target='_blank'
+                     rel='noopener noreferrer'
+                     >read more</a>
                 </div>
                 <button className="remove-btn">remove </button>
             </article>
