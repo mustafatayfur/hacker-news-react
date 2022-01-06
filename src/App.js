@@ -10,7 +10,5 @@ function App() {
       <Stories/>
     </div>
   )
-
 }
-
 export default App
