@@ -16,7 +16,7 @@ const initialState = {
   hits: [],
   query: 'react',
   page:0,
-  nbPages: 0
+  nbPages: 50
 }
 
 const AppContext = React.createContext();
@@ -48,7 +48,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(()=> {
     fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
-  },[state.query])
+  },[state.query, ])
 
   return <AppContext.Provider value={{...state, removeStory, handleSearch, handlePage}}>
             {children}
